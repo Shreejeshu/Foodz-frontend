@@ -36,7 +36,7 @@ export class LoginComponent {
         localStorage.setItem('username',result.username)
         setTimeout(() => {
         
-          this.userrouter.navigateByUrl('foodx')
+          this.userrouter.navigateByUrl('foodz')
         }, 1000);
       },(result:any)=>{
         setTimeout(() => {

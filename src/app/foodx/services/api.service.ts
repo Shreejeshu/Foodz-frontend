@@ -29,11 +29,11 @@ export class ApiService {
   }
 
   getfoods(){
-    return this.http.get(`${this.base_url}/foodx/foods`,this.appendtoken())
+    return this.http.get(`${this.base_url}/foodz/foods`,this.appendtoken())
   }
 
   viewfood(id:any){
-    return this.http.get(`${this.base_url}/foodx/viewfood/${id}`,this.appendtoken())
+    return this.http.get(`${this.base_url}/foodz/viewfood/${id}`,this.appendtoken())
   }
 
   addtocart(foods:any){
@@ -44,16 +44,16 @@ export class ApiService {
       image:foods.image,
       quantity:foods.quantity,
     }
-    return this.http.post(`${this.base_url}/foodx/addtocart`,body,this.appendtoken())
+    return this.http.post(`${this.base_url}/foodz/addtocart`,body,this.appendtoken())
 
   }
 
   getcart(){
-    return this.http.get(`${this.base_url}/foodx/getcartitems`,this.appendtoken())
+    return this.http.get(`${this.base_url}/foodz/getcartitems`,this.appendtoken())
   }
 
   emptycart(){
-    return this.http.delete(`${this.base_url}/foodx/emptycart`)
+    return this.http.delete(`${this.base_url}/foodz/emptycart`)
   }
   
 
@@ -69,32 +69,32 @@ export class ApiService {
     })
   }
   removecartitem(id:any){
-    return this.http.delete(`${this.base_url}/foodx/removeitem/${id}`,this.appendtoken())
+    return this.http.delete(`${this.base_url}/foodz/removeitem/${id}`,this.appendtoken())
   }
 
   incart(id:any){
-    return this.http.get(`${this.base_url}/foodx/incart/${id}`)
+    return this.http.get(`${this.base_url}/foodz/incart/${id}`)
   }
   decart(id:any){
-    return this.http.get(`${this.base_url}/foodx/decart/${id}`)
+    return this.http.get(`${this.base_url}/foodz/decart/${id}`)
   }
 
   signup(inputdata:any){
-    return this.http.post(`${this.base_url}/foodx/register`,inputdata)
+    return this.http.post(`${this.base_url}/foodz/register`,inputdata)
   }
   adminlogin(username:any,password:any){
     const body={
     username,
     password
     }
-   return this.http.post(`${this.base_url}/foodx/adminlogin`,body) 
+   return this.http.post(`${this.base_url}/foodz/adminlogin`,body) 
   }
   userlogin(username:any,password:any){
     const body={
     username,
     password
     }
-   return this.http.post(`${this.base_url}/foodx/userlogin`,body) 
+   return this.http.post(`${this.base_url}/foodz/userlogin`,body) 
   }
 
   addproduct(id:any,name:any,image:any,price:any,description:any,category:any){
@@ -106,22 +106,22 @@ export class ApiService {
       description,
       category
     }
-    return this.http.post(`${this.base_url}/foodx/addfood`,body)
+    return this.http.post(`${this.base_url}/foodz/addfood`,body)
   }
 
   getusers(){
-    return this.http.get(`${this.base_url}/foodx/getuserdetails`)
+    return this.http.get(`${this.base_url}/foodz/getuserdetails`)
   }
 
   removeuser(username:any){
-    return this.http.delete(`${this.base_url}/foodx/removeuser/${username}`)
+    return this.http.delete(`${this.base_url}/foodz/removeuser/${username}`)
   }
 
   showfoods(){
-    return this.http.get(`${this.base_url}/foodx/showfoods`)
+    return this.http.get(`${this.base_url}/foodz/showfoods`)
   }
   removefooddb(id:any){
-    return this.http.delete(`${this.base_url}/foodx/removedbfood/${id}`)
+    return this.http.delete(`${this.base_url}/foodz/removedbfood/${id}`)
   }
 
   submituseraddress(name:any,username:any,flat:any,street:any,state:any){
@@ -132,27 +132,27 @@ export class ApiService {
       street,
       state
     }
-    return this.http.post(`${this.base_url}/foodx/useraddress`,body)
+    return this.http.post(`${this.base_url}/foodz/useraddress`,body)
   }
 
   getpizza(){
-    return this.http.get(`${this.base_url}/foodx/getpizza`)
+    return this.http.get(`${this.base_url}/foodz/getpizza`)
   }
 
   getsalad(){
-    return this.http.get(`${this.base_url}/foodx/getsalad`)
+    return this.http.get(`${this.base_url}/foodz/getsalad`)
   }
   getdrink(){
-    return this.http.get(`${this.base_url}/foodx/getdrink`)
+    return this.http.get(`${this.base_url}/foodz/getdrink`)
   }
   getsauce(){
     return this.http.get(`${this.base_url}/foodx/getsauce`)
   }
   getpasta(){
-    return this.http.get(`${this.base_url}/foodx/getpasta`)
+    return this.http.get(`${this.base_url}/foodz/getpasta`)
   }
 
   getdessert(){
-    return this.http.get(`${this.base_url}/foodx/getdessert`)
+    return this.http.get(`${this.base_url}/foodz/getdessert`)
   }
 }

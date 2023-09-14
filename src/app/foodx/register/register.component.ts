@@ -29,7 +29,7 @@ signup(){
       this.registerstatus=true
       setTimeout(() => {
         alert('registered successfully')
-        this.registerrouter.navigateByUrl('foodx/login')
+        this.registerrouter.navigateByUrl('foodz/login')
       }, 2000);
       
      })

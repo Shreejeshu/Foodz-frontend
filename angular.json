@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "foodx-frontend:build:production"
+              "browserTarget": "foodz-frontend:build:production"
             },
             "development": {
-              "browserTarget": "foodx-frontend:build:development"
+              "browserTarget": "foodz-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "foodx-frontend:build"
+            "browserTarget": "foodz-frontend:build"
           }
         },
         "test": {

@@ -33,7 +33,7 @@ export class CartComponent {
     name:[''],
     flat:[''],
     street:[''],
-    state:['']
+    state:[''],
   })
   constructor (private api:ApiService,private fb:FormBuilder,private cartrouter:Router){
 
@@ -138,7 +138,7 @@ export class CartComponent {
     localStorage.removeItem('token')
     this.cartitems= this.api.logout()
     setTimeout(() => {
-      this.cartrouter.navigateByUrl('foodx/login')
+      this.cartrouter.navigateByUrl('foodz/login')
     }, 2000);
   }
 
@@ -193,7 +193,8 @@ export class CartComponent {
       this.showsuccess = true;
       // hide paypal view
       this.showpaypal=false
-      alert("payment successful")
+      alert("transaction successful")
+   
       // hide make payment button
       this.proceedtopaymentstatus=false
       this.api.submituseraddress(this.username,this.name,this.flat,this.street,this.state).subscribe((result:any)=>{

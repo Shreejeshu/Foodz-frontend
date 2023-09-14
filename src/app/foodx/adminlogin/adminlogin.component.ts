@@ -31,7 +31,7 @@ adminlogin(){
       this.loginstatus=true
       localStorage.setItem("username",result.username)
       setTimeout(() => {
-        this.adrouter.navigateByUrl('foodx/admin-home')
+        this.adrouter.navigateByUrl('foodz/admin-home')
       }, 3000);
     },(result:any)=>{
       setTimeout(() => {

@@ -60,7 +60,7 @@ export class ViewComponent {
     localStorage.removeItem('username')
     localStorage.removeItem('token')
     setTimeout(() => {
-      this.viewrouter.navigateByUrl('foodx/login')
+      this.viewrouter.navigateByUrl('foodz/login')
     }, 2000);
   }
 

@@ -41,7 +41,7 @@ export class AdminhomeComponent {
   ngOnInit() : void {
     if(localStorage.getItem('token')){
       alert("Please login")
-      this.adminrouter.navigateByUrl('foodx/login/admin')
+      this.adminrouter.navigateByUrl('foodz/login/admin')
     }
     
     this.api.getusers()
@@ -109,7 +109,7 @@ export class AdminhomeComponent {
   logout(){
     localStorage.removeItem('username')
     localStorage.removeItem('token')
-      this.adminrouter.navigateByUrl('foodx/login/admin')
+      this.adminrouter.navigateByUrl('foodz/login/admin')
   }
 
   showproduct(){

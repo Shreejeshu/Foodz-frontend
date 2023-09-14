@@ -87,7 +87,7 @@ alldessert:any=[]
       this.api.emptycart().subscribe((result:any)=>{
 
       })
-      this.foodrouter.navigateByUrl('foodx/login')
+      this.foodrouter.navigateByUrl('foodz/login')
   }
   
   getpizzaclick(){
